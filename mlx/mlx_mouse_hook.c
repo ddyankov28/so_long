@@ -8,11 +8,15 @@
 ** Last update Fri Feb 23 17:11:05 2001 Charlie Root
 */
 
-#include "mlx_int.h"
 
-int	mlx_mouse_hook(t_win_list *win, int (*funct)(), void *param)
+#include	"mlx_int.h"
+
+
+
+
+int		mlx_mouse_hook(t_win_list *win,int (*funct)(),void *param)
 {
-	win->hooks[ButtonPress].hook = funct;
-	win->hooks[ButtonPress].param = param;
-	win->hooks[ButtonPress].mask = ButtonPressMask;
+  win->hooks[ButtonPress].hook = funct;
+  win->hooks[ButtonPress].param = param;
+  win->hooks[ButtonPress].mask = ButtonPressMask;
 }
