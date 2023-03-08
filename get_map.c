@@ -20,7 +20,7 @@ void	get_map(t_game *game, char *map_name)
 	fd = open(map_name, O_RDONLY);
 	if (fd < 0)
 	{
-		ft_printf(RED"Error: File does not exist\n");
+		ft_printf("Error\nFile does not exist\n");
 		free_game_map(game);
 		exit(1);
 	}

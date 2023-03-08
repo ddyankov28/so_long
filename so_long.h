@@ -21,9 +21,6 @@
 # include <string.h>
 # include <unistd.h>
 
-# define RED "\e[1;31m"
-# define GREEN "\e[1;32m"
-
 # define ESCAPE 65307
 # define W 119
 # define S 115

@@ -42,13 +42,13 @@ void	count_error(t_game *game)
 {
 	if (game->player_count != 1 || game->exit_count != 1)
 	{
-		ft_printf(RED "Error: You need 1 Exit and 1 Player to start!! \n");
+		ft_printf("Error\nYou need 1 Exit and 1 Player to start!! \n");
 		free_game_map(game);
 		exit(1);
 	}
 	if (game->collect_count < 1)
 	{
-		ft_printf(RED "Error: You need collectibles to start!!\n");
+		ft_printf("Error\nYou need collectibles to start!!\n");
 		free_game_map(game);
 		exit(1);
 	}
@@ -106,19 +106,19 @@ void	check(t_game *game)
 	count_error(game);
 	if (rectangle(game) == 1)
 	{
-		ft_printf(RED "Error: Map is NOT rectangle\n");
+		ft_printf("Error\nMap is NOT rectangle\n");
 		free_game_map(game);
 		exit(1);
 	}
 	if (check_char_and_wall(game) == 1)
 	{
-		ft_printf(RED "Error: Map has illegal character\n");
+		ft_printf("Error\nMap has illegal character\n");
 		free_game_map(game);
 		exit(1);
 	}
 	if (check_char_and_wall(game) == 2)
 	{
-		ft_printf(RED "Error: Map NOT surrounded by WALLS\n");
+		ft_printf("Error\nMap NOT surrounded by WALLS\n");
 		free_game_map(game);
 		exit(1);
 	}

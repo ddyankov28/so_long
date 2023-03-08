@@ -36,7 +36,7 @@ int	valid_extension(char *av)
 	extension = ft_strrchr(av, '.');
 	if (!extension || ft_strncmp(extension, ".ber", 5) != 0)
 	{
-		ft_printf(RED "Map must end with < .ber >\n");
+		ft_printf("Error\nMap must end with < .ber >\n");
 		return (1);
 	}
 	return (0);
@@ -54,7 +54,7 @@ void	args(int ac, char **av)
 	(void)av;
 	if (ac != 2)
 	{
-		ft_printf(RED "Error: Enter 2 arguments(the exe and a map) please!\n");
+		ft_printf("Error\nEnter 2 arguments(the exe and a map) please!\n");
 		exit(1);
 	}
 }

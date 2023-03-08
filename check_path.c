@@ -15,7 +15,7 @@ void	find_path(t_game *game, int y, int x, int *collect)
 {
 	if (game->map[y][x] == '1' || game->map[y][x] == 'c'
 		|| game->map[y][x] == 'o' || game->map[y][x] == 'e'
-		|| game->map[y][x] == 'E')
+		|| game->map[y][x] == 'E' || game->map[y][x] == 'X')
 	{
 		if (game->map[y][x] == 'E')
 			game->exit_flag = 1;
@@ -65,14 +65,14 @@ void	valid_path(t_game *game)
 	find_path(game, game->player_y, game->player_x, &collect);
 	if (collect != 0)
 	{
-		ft_printf(RED "Error : No valid path to a ball\n");
+		ft_printf("Error\nNo valid path to a ball\n");
 		free_game_map(game);
 		exit(1);
 	}
 	restore_map(game);
 	if (game->exit_flag == 0)
 	{
-		ft_printf(RED "Error: No valid path to Exit\n");
+		ft_printf("Error\nNo valid path to Exit\n");
 		free_game_map(game);
 		exit(1);
 	}

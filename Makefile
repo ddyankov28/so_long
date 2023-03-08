@@ -6,7 +6,7 @@
 #    By: ddyankov <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 13:02:45 by ddyankov          #+#    #+#              #
-#    Updated: 2023/03/08 11:40:42 by ddyankov         ###   ########.fr        #
+#    Updated: 2023/03/08 17:45:10 by ddyankov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,19 +21,23 @@ CFLAGS = -Wall -Werror -Wextra -g
 
 MLX = -I ./mlx -L ./mlx -lmlx -lXext -lX11
 
-LIBFT = --include-dir libft/libft.a
+LIBFT = libft/libft.a
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@make --directory libft
+	@make -C mlx
+	@make -C libft
 	@cc $(CFLAGS) $(OBJ) $(MLX) $(LIBFT) -o so_long
 
 clean:
-	@make fclean -C libft
+	@rm -f $(OBJ)
+	@make clean -C libft
 
 fclean: clean
 	@make fclean -C libft
-	@rm -f so_long *.o
+	@rm -f $(NAME)
 
 re: fclean all
+
+.PHONY:		all clean fclean re
