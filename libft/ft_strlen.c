@@ -13,11 +13,11 @@
 
 int	ft_strlen(const char *str)
 {	
-	if (!str)
-		return (0);
 	int	a;
 
 	a = 0;
+	if (!str)
+		return (0);
 	while (str[a] != '\0')
 		a++;
 	return (a);

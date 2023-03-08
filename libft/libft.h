@@ -21,7 +21,7 @@
 # include <stddef.h>
 
 # ifndef BUFFER_SIZE
-# define BUFFER_SIZE 10
+#  define BUFFER_SIZE 10
 # endif
 
 typedef struct s_list
@@ -62,7 +62,6 @@ char				*get_next_line(int fd);
 
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
-
 
 void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_memset(void *s, int c, size_t n);

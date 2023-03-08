@@ -13,9 +13,9 @@
 
 char	*ft_strnstr(const char *big, const char *little, int len)
 {
-	int	counter;
-	int	index;
 	char	*b;
+	int		counter;
+	int		index;
 
 	b = (char *)big;
 	counter = 0;
