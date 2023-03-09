@@ -6,7 +6,7 @@
 #    By: ddyankov <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 13:02:45 by ddyankov          #+#    #+#              #
-#    Updated: 2023/03/08 17:45:10 by ddyankov         ###   ########.fr        #
+#    Updated: 2023/03/09 09:32:28 by ddyankov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ $(NAME): $(OBJ)
 clean:
 	@rm -f $(OBJ)
 	@make clean -C libft
+	@make clean -C mlx
 
 fclean: clean
 	@make fclean -C libft
